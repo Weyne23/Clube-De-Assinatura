@@ -48,10 +48,17 @@
 body {
     color: var(--text-body);
     background-color: var(--shape-background);
+    position: relative;
 
-    & #image-background-up {
+    &::before {
+        content: "";
+        margin-top: auto;
+        position: absolute;
+        min-height: 500rem;
+        width: 100%;
+        animation: appear 2.5s ease;
         background:top center/135% no-repeat url("../assets/image/hero-background.png");
-        min-height: 59.25rem;
+        z-index: -1;
     }
 }
 
@@ -90,4 +97,9 @@ a {
 
 img {
     max-width: 100%;
+}
+
+p {
+    font-weight: var(--fw-base);
+    line-height: 1.4;
 }

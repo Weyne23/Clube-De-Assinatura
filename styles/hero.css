@@ -1,0 +1,31 @@
+#apresentation {
+    display: flex;
+    justify-content: center;
+    min-height: 59.25rem;
+    text-align: center;
+
+    & > div {
+        max-width: 41rem;
+        max-height: 12.5rem;
+
+        & h1 {
+            animation: appear 2.5s ease;
+        }
+
+        & p {
+            padding-top: 2rem;
+            padding-inline: 100px;
+            animation: appear 500ms 1s ease both;
+        }
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
