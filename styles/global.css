@@ -49,24 +49,16 @@ body {
     color: var(--text-body);
     background-color: var(--shape-background);
     position: relative;
-
-    &::before {
-        content: "";
-        margin-top: auto;
-        position: absolute;
-        min-height: 500rem;
-        width: 100%;
-        animation: appear 2.5s ease;
-        background:top center/135% no-repeat url("../assets/image/hero-background.png");
-        z-index: -1;
-    }
+    max-width: 1440px;
 }
 
 html {
+    display: flex;
     font-family: var(--ff-sans);
     font-weight: var(--fw-base);
     line-height: normal;
     color: var(--text-body);
+    justify-content: center;
 }
 
 h1, h2, h3, h4 {
@@ -100,6 +92,7 @@ img {
 }
 
 p {
-    font-weight: var(--fw-base);
+    font-size: var(--fs-lg);
+    font-weight: 200;
     line-height: 1.4;
 }

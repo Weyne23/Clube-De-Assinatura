@@ -1,0 +1,13 @@
+#image-bg-hd {
+    &::before {
+        content: "";
+        opacity: 0;
+        margin-top: auto;
+        position: absolute;
+        min-height: 500rem;
+        width: 100%;
+        animation: appear 2.5s ease both;
+        background:top center/135% no-repeat url("../assets/image/hero-background.png");
+        z-index: -1;
+    }
+}

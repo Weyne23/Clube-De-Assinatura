@@ -8,14 +8,11 @@
         max-width: 41rem;
         max-height: 12.5rem;
 
-        & h1 {
-            animation: appear 2.5s ease;
-        }
-
         & p {
+            opacity: 0;
             padding-top: 2rem;
             padding-inline: 100px;
-            animation: appear 500ms 1s ease both;
+            animation: appear 1s 1s ease both;
         }
     }
 }

@@ -1,3 +1,25 @@
 .flex {
     display: flex;
 }
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes grow2 {
+    from {
+        scale: 1;
+    }
+    
+    to {
+        scale: 1.8;
+    }
+}
