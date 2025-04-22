@@ -8,6 +8,16 @@
     }
 }
 
+@keyframes disapear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .5;
+    }
+}
+
 @keyframes grow {
     to {
         scale: 1;
@@ -15,11 +25,38 @@
 }
 
 @keyframes grow2 {
-    from {
+    0% {
         scale: 1;
     }
     
-    to {
-        scale: 1.8;
+    50% {
+        scale: 1.1;
     }
 }
+
+@keyframes icon-animation {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+
+}
+
+@keyframes icon-animation-reverse {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0;
+        opacity: 0;
+    }
+    
+}
+
