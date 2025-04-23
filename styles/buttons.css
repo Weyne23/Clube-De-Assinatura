@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: .75rem 1.25rem;
     background-color: #7D298A;
     margin-top: 0.5625rem; 

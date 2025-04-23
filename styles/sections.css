@@ -30,16 +30,16 @@
     position: relative;
 
     &::before {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 60%;
-    left: 3rem;
-    bottom: 4.5rem;
-    z-index: -2;
-    filter: blur(350px);
-    background-color: var(--pink-low);
-  }
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 60%;
+        left: 3rem;
+        bottom: 4.5rem;
+        z-index: -2;
+        filter: blur(350px);
+        background-color: var(--pink-low);
+    }
     
     & div:nth-child(1) {
         padding-inline: 7.5rem;
@@ -378,6 +378,18 @@
         align-items: center;
         position: relative;
         background: center center/contain no-repeat url("/assets/image/book-colina.png");
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 60%;
+            left: 3rem;
+            bottom: 4.5rem;
+            z-index: -2;
+            filter: blur(20rem);
+            background-color: var(--pink-low);
+          }
 
         & img, & p {
             position: absolute;
@@ -429,7 +441,7 @@
 
         & img[src*='arrow-pin'] {
             bottom: 32%;
-            right: 61.5%;
+            right: 61%;
             z-index: -1;
             transform: scale(0.7);
             transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
@@ -478,7 +490,143 @@
             & .par-pin {
                 transform: translateX(-15rem) translateY(5.625rem);
             }
-    
+        }
+    }
+}
+
+#price {
+    text-align: center;
+    background-image: url('../assets/image/pricing-background.png');
+
+    & ul {
+        list-style-position: inside;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 3rem;
+        top: 13rem;
+        z-index: -2;
+        filter: blur(15rem);
+        background-color: var(--shape-base);
+    }
+
+    /* filter: drop-shadow(0px 0px 1rem var(--shape-base)); */
+
+    & > h2 {
+        padding-block: 15rem 8.68125rem;
+    }
+
+    & p {
+        font-size: var(--fs-sm);
+        margin-bottom: auto;
+    }
+
+    & .monthly-fees {
+        justify-self: center;
+        text-align: left;
+        gap: .5rem;
+        & > div:nth-child(1), & > div:nth-child(3) {
+            .btn {
+                background-color: var(--blue-dark);
+
+                &::before {
+                    background-color: var(--blue-mid);
+                }
+            }
+        }
+
+        & > div:nth-child(2) {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url('../assets/image/Bunny.png');
+                width: 2.815625rem;
+                height: 3.120625rem;
+                top:-3.2rem
+            }
+        }
+        
+        & > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--shape-base);
+            height: 26rem;
+            width: 18rem;
+            padding: 2rem;
+            transition: all 600ms;
+            
+            border: 1px solid var(--shape-stroke);
+
+            border-radius: 1.5rem;
+
+            & ul {
+                font-size: var(--fs-xs);
+                margin-bottom: 1.5rem;
+                
+                & li {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    list-style: url('../assets/star-li-pink.svg') inside;
+                    text-align: start;
+                    padding-bottom: .75rem;
+
+                    & img {
+                        filter: drop-shadow(0px 0px .4rem #882F97);
+                    }
+                }
+            }
+
+            & > span {
+                font-weight: var(--fw-bold);
+                color: var(--blue-light);
+            }
+
+            &:hover {
+                z-index: 5;
+                transform: translatey(-.6rem);
+                background-color: var(--shape-hover);
+                filter: drop-shadow(0px 0px 5rem var(--blue-low));
+                /* animation: sobeDesce 500ms 0s both infinite; */
+            }
+            
+        }
+
+        & .popular {
+            justify-content: space-between;
+            vertical-align: top;
+            position: relative;
+
+            & span {
+                font-weight: var(--fw-bold);
+                color: var(--pink-light);
+            }
+
+            & p {
+                position: absolute;
+                font: var(--fw-bold) .625rem/normal var(--ff-sans);
+                letter-spacing: .05rem;
+                padding: .5625rem 1.25rem;
+                background-color: var(--shape-stroke);
+                border-radius: 1rem;
+                right: 0px;
+                top: -8px;
+            }
+        }
+
+        & h2 {
+            margin-block: 1.5rem .5rem;
+
+            & span {
+                font-size: var(--fs-h4);
+            }
         }
     }
 }

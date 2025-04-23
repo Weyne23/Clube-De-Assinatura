@@ -50,6 +50,7 @@ body {
     background-color: var(--shape-background);
     position: relative;
     max-width: 1440px;
+    overflow-x: hidden;
 }
 
 html {
@@ -59,6 +60,7 @@ html {
     line-height: normal;
     color: var(--text-body);
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
@@ -95,4 +97,8 @@ p {
     font-size: var(--fs-lg);
     font-weight: 200;
     line-height: 1.4;
+}
+
+ul[role="list"] {
+    list-style: none;
 }

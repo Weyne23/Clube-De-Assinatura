@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.grid {
+    display: grid;
+}
+
 @keyframes appear {
     to {
         opacity: 1;
