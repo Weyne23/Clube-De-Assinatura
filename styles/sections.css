@@ -517,7 +517,7 @@
     /* filter: drop-shadow(0px 0px 1rem var(--shape-base)); */
 
     & > h2 {
-        padding-block: 15rem 8.68125rem;
+        padding-block: 15rem 9.125rem;
     }
 
     & p {
@@ -525,10 +525,39 @@
         margin-bottom: auto;
     }
 
+    &:hover {
+        & .monthly-fees > div:nth-child(1) {
+            animation: animateCardMonth 1s ease both;  
+        }
+
+        & .monthly-fees > div:nth-child(2) {
+            animation: animateCardWeekly 500ms linear both;
+        }
+
+        & .monthly-fees > div:nth-child(3) {
+            animation: animateCardAnnual 1s ease both; 
+        }
+    }
+
+    &:not(:hover) {
+        & .monthly-fees > div:nth-child(1) {
+            animation: animateNotCardMonth 600ms ease both;  
+        }
+
+        & .monthly-fees > div:nth-child(2) {
+            animation: animateNotCardWeekly 500ms linear both;
+        }
+
+        & .monthly-fees > div:nth-child(3) {
+            animation: animateNotCardAnnual 600ms ease both; 
+        }
+    }
+
     & .monthly-fees {
         justify-self: center;
         text-align: left;
         gap: .5rem;
+        padding-bottom: 18.875rem;
         & > div:nth-child(1), & > div:nth-child(3) {
             .btn {
                 background-color: var(--blue-dark);
@@ -541,6 +570,8 @@
 
         & > div:nth-child(2) {
             position: relative;
+            z-index: 3;
+            background-color: var(--shape-hover);
 
             &::before {
                 position: absolute;
@@ -555,6 +586,7 @@
         & > div {
             display: flex;
             flex-direction: column;
+            position: absolute;
             justify-content: space-between;
             background-color: var(--shape-base);
             height: 26rem;
@@ -591,10 +623,17 @@
 
             &:hover {
                 z-index: 5;
-                transform: translatey(-.6rem);
+                /* transform: translatey(-.6rem); */
+                translate: 0px -1rem;
+                &:div:nth-child(2){
+                    background-color: var(--shape-base);
+                }
                 background-color: var(--shape-hover);
                 filter: drop-shadow(0px 0px 5rem var(--blue-low));
                 /* animation: sobeDesce 500ms 0s both infinite; */
+                /* &:not(:nth-child(2)) { */
+                    
+                /* } */
             }
             
         }
@@ -611,7 +650,7 @@
 
             & p {
                 position: absolute;
-                font: var(--fw-bold) .625rem/normal var(--ff-sans);
+                font: var(--fw-bold) .625rem/normal var(--ff-sans); 
                 letter-spacing: .05rem;
                 padding: .5625rem 1.25rem;
                 background-color: var(--shape-stroke);
@@ -628,5 +667,62 @@
                 font-size: var(--fs-h4);
             }
         }
+    }
+}
+
+@keyframes animateCardMonth {
+    70% {
+        transform: translateX(-19rem) translateY(3rem) rotate(-8deg);
+    }
+
+    100% {
+        transform: translateX(-18rem) translateY(3rem)  rotate(-8deg);
+    }
+}
+
+@keyframes animateCardAnnual {
+    70% {
+        transform: translateX(19rem) translateY(1.9325rem) rotate(8deg); 
+    }
+
+    100% {
+        transform: translateX(18rem) translateY(1.9325rem) rotate(8deg);
+    }     
+}
+
+@keyframes animateCardWeekly {
+    100% {
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes animateNotCardMonth {
+    0% {
+        transform: translateX(-18rem) translateY(3rem)  rotate(-8deg);
+    }
+
+    100% {
+        transform: translateX(0rem) translateY(0rem)  rotate(0deg);
+    }
+}
+
+@keyframes animateNotCardAnnual {
+    0% {
+        transform: translateX(18rem) translateY(1.9325rem) rotate(8deg);
+    }
+
+    100% {
+        transform: translateX(0rem) translateY(0rem)  rotate(0deg);
+    }   
+}
+
+@keyframes animateNotCardWeekly {
+
+    0% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
     }
 }
