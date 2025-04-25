@@ -258,3 +258,54 @@
         }
     }
 }
+
+@media (width < 50em){
+    #price {
+        padding-block: 6.5rem;
+
+        & > h2 {
+            padding-block: 6.5rem 3rem;
+        }
+
+        &:hover {
+            & .monthly-fees > div:nth-child(1), & .monthly-fees > div:nth-child(2), & .monthly-fees > div:nth-child(3) {
+                animation: none;
+            }
+        }
+
+        &:not(:hover){
+            & .monthly-fees > div:nth-child(1), & .monthly-fees > div:nth-child(2), & .monthly-fees > div:nth-child(3) {
+                animation: none;
+            }
+        }
+        & .monthly-fees {
+            animation: none;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-bottom: 0rem;
+
+            & > div {
+                position: inherit;
+
+                &:hover {
+                    translate: 0px 0px;
+                    scale: 1.02;
+                }
+
+                & h2 {
+                    font-size: 2.5rem;
+                }
+            }
+
+            & > div:nth-child(1), & > div:nth-child(2), & > div:nth-child(3) {
+                &::before {
+                    opacity: 0;
+                }
+    
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

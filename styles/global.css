@@ -103,3 +103,9 @@ p {
 ul[role="list"] {
     list-style: none;
 }
+
+@media (width < 50em) {
+    :root {
+        --fs-h2: 1.5rem;
+    }
+}
