@@ -1,13 +1,15 @@
 footer {
     background: center center/contain no-repeat url('../assets/image/book-trace-background.png');
     padding-block: 10.625rem 7.151875rem;
-    justify-content: space-around;
+    padding-inline: 10rem;
+    justify-content: space-between;
     align-items: center;
 
     & .left {
+        
         & .separator {
             height: 1px;
-            margin-block: 0.75rem;
+            margin-block: 0.6875rem;
             background-color: var(--shape-stroke);
         }
 
@@ -16,12 +18,17 @@ footer {
             align-items: center;
 
             
-            & div {
-                padding: .5rem;
+            & > div {
+                padding: .5rem .5rem .25rem;
+                border-radius: 50%;
+                transition: background-color 300ms;
+
+                & svg path {
+                    transition: fill 300ms;
+                }
 
                 &:hover {
                     background-color: var(--shape-stroke);
-                    border-radius: 50%;
 
                     & svg path {
                         fill: var(--text-body);

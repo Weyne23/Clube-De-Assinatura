@@ -1,0 +1,26 @@
+#apresentation {
+    display: flex;
+    justify-content: center;
+    min-height: 50rem;
+    max-height: 59,25rem;
+    text-align: center;
+
+    & > div {
+        justify-self: flex-end;
+        margin-inline: 10rem;
+        max-width: 41rem;
+        max-height: 12.5rem;
+
+        & h1 {
+            opacity: 0;
+            animation: appear 2s cubic-bezier(1,-0.03, 0.5, 1) both;
+        }
+
+        & p {
+            opacity: 0;
+            padding-top: 2rem;
+            padding-inline: 80px;
+            animation: appear 500ms 1s ease both;
+        }
+    }
+}

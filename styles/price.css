@@ -1,0 +1,260 @@
+#price {
+    text-align: center;
+    background-image: url('../assets/image/pricing-background.png');
+    position: relative;
+
+    & ul {
+        list-style-position: inside;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        left: .1rem;
+        top: .1rem;
+        z-index: -2;
+        filter: blur(15rem);
+        background-color: var(--shape-base);
+    }
+
+    backdrop-filter: drop-shadow(50px 10px 0px var(--shape-base));
+    /* filter: drop-shadow(0px 0px 1rem var(--shape-base)); */
+
+    & > h2 {
+        padding-block: 15rem 9.125rem;
+    }
+
+    & p {
+        font-size: var(--fs-sm);
+        margin-bottom: auto;
+    }
+
+    &:hover {
+        & .monthly-fees > div:nth-child(1) {
+            animation: animateCardMonth 1s ease both;
+            
+            &::before, &::after {
+                animation: animationStarCardMonth 500ms ease both;
+            }
+        }
+
+        & .monthly-fees > div:nth-child(2) {
+            animation: animateCardWeekly 500ms linear both;
+        }
+
+        & .monthly-fees > div:nth-child(3) {
+            animation: animateCardAnnual 1s ease both;
+
+            &::before, &::after {
+                animation: animationStarCardAnnual 500ms ease both;
+            }
+        }
+    }
+
+    &:not(:hover) {
+        & .monthly-fees > div:nth-child(1) {
+            animation: animateNotCardMonth 600ms ease both;
+
+            &::before {
+                animation: animationReverseStarCardMonth 600ms ease both;
+            }
+
+            &::after {
+                animation: animationReverseStarCardMonth 600ms ease both;
+            }
+        }
+
+        & .monthly-fees > div:nth-child(2) {
+            animation: animateNotCardWeekly 500ms linear both;
+        }
+
+        & .monthly-fees > div:nth-child(3) {
+            animation: animateNotCardAnnual 600ms ease both; 
+
+            &::before {
+                animation: animationReverseStarCardAnnual 600ms ease both;
+            }
+
+            &::after {
+                animation: animationReverseStarCardAnnual 600ms ease both;
+            }
+        }
+    }
+
+    & .monthly-fees {
+        justify-self: center;
+        text-align: left;
+        gap: .5rem;
+        padding-bottom: 18.875rem;
+        & > div:nth-child(1), & > div:nth-child(3) {
+            .btn {
+                background-color: var(--blue-dark);
+
+                &::before {
+                    background-color: var(--blue-mid);
+                }
+            }
+        }
+
+        & > div:nth-child(1) {
+            &::before {
+                position: absolute;
+                content: "";
+                background: center center/contain no-repeat url('../assets/star.svg');
+                width: 1.625rem;
+                height: 1.625rem;
+                top:-1.4rem;
+                left: -3rem;
+                
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: center center/contain no-repeat url('../assets/star.svg');
+                width: 0.8125rem;
+                height: 0.8125rem;
+                top:.9rem;
+                left: -3.3rem;
+            }
+        }
+
+        & > div:nth-child(2) {
+            position: relative;
+            z-index: 3;
+            background-color: var(--shape-hover);
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url('../assets/image/Bunny.png');
+                width: 2.815625rem;
+                height: 3.120625rem;
+                top:-3.2rem;
+            }
+        }
+
+        & > div:nth-child(3) {
+            &::before {
+                position: absolute;
+                content: "";
+                background: center center/contain no-repeat url('../assets/star.svg');
+                width: 1.625rem;
+                height: 1.625rem;
+                bottom:-2rem;
+                right: -2.5rem;
+                
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: center center/contain no-repeat url('../assets/star.svg');
+                width: 0.8125rem;
+                height: 0.8125rem;
+                bottom:-2.2rem;
+                right: .5rem;
+            }
+        }
+        
+        & > div {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: space-between;
+            background-color: var(--shape-base);
+            height: 26rem;
+            width: 18rem;
+            padding: 2rem;
+            transition: all 600ms;
+            border: 1px solid var(--shape-stroke);
+            border-radius: 1.5rem;
+            &::after, &::before {
+                transition: all 600ms;
+            }
+
+            & ul {
+                font-size: var(--fs-xs);
+                margin-bottom: 1.5rem;
+                
+                & li {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    list-style: url('../assets/star-li-pink.svg') inside;
+                    text-align: start;
+                    padding-bottom: .75rem;
+
+                    & img {
+                        filter: drop-shadow(0px 0px .4rem #882F97);
+                    }
+                }
+            }
+
+            & > span {
+                font-weight: var(--fw-bold);
+                color: var(--blue-light);
+            }
+
+            &:hover {
+                z-index: 5;
+                translate: 0px -1rem;
+                background-color: var(--shape-hover);
+                filter: drop-shadow(0px 0px 5rem var(--blue-low));
+
+                &:nth-child(1) {
+                    &::before {
+                        rotate: -19deg;
+                    }
+
+                    &::after {
+                        rotate: 15deg;
+                        /* transform: translateY(.7rem) translateX(.099rem); */
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        rotate: 19deg;
+                    }
+
+                    &::after {
+                        rotate: -40deg;
+                    }
+                }
+            }
+        }
+
+        & .popular {
+            justify-content: space-between;
+            vertical-align: top;
+            position: relative;
+
+            & span {
+                font-weight: var(--fw-bold);
+                color: var(--pink-light);
+            }
+
+            & p {
+                position: absolute;
+                font: var(--fw-bold) .625rem/normal var(--ff-sans); 
+                letter-spacing: .05rem;
+                padding: .5625rem 1.25rem;
+                background-color: var(--shape-stroke);
+                border-radius: 1rem;
+                right: 0px;
+                top: -8px;
+            }
+        }
+
+        & h2 {
+            margin-block: 1.5rem .5rem;
+
+            & span {
+                font-size: var(--fs-h4);
+            }
+        }
+    }
+}

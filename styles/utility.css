@@ -120,3 +120,36 @@
         transform: translateY(0rem);
     }
 }
+
+@keyframes animationStarCardMonth {
+    100% {
+        translate: 1.6rem -.5rem;
+        /* transition: translateX(-15rem); */
+    }
+}
+
+@keyframes animationReverseStarCardMonth {
+    0% {
+        translate: 1.6rem -.5rem;
+    }
+
+    100% {
+        translate: 0rem 0rem;
+    }
+}
+
+@keyframes animationStarCardAnnual {
+    100% {
+        translate: .1rem -.6rem;
+    }
+}
+
+@keyframes animationReverseStarCardAnnual {
+    0% {
+        translate: .1rem -.6rem;
+    }
+
+    100% {
+        translate: 0rem 0rem;
+    }
+}

@@ -1,0 +1,147 @@
+#mensal-kit {
+    text-align: center;
+
+    & p {
+        font-size: 1rem;
+        padding-bottom: 13.5rem;
+    }
+
+    & > div:nth-child(1) {
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 14.6875rem;
+        margin-bottom: 0.1875rem;
+
+        & img {
+            width: 2rem;
+            height: 2rem;
+            filter: drop-shadow(0px 0px 1rem var(--pink-base));
+        }
+    }
+
+    & .mensal-kit-animation {
+        justify-self: center;
+        right: 1rem;
+        height: 40rem;
+        max-width: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: center center/contain no-repeat url("/assets/image/book-colina.png");
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 60%;
+            left: 3rem;
+            bottom: 4.5rem;
+            z-index: -2;
+            filter: blur(20rem);
+            background-color: var(--pink-low);
+          }
+
+        & img, & p {
+            position: absolute;
+        }
+
+        & img[src*='bookmark']{
+            height: 85%;
+            bottom: 6%;
+            left: 53%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & img[src*='arrow-page-mark'] {
+            bottom: 16%;
+            left: 58%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & .par-bookmark {
+            bottom: -20%;
+            left: 50%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & img[src*='arrow-book'] {
+            top: 25%;
+            right: 41%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+        
+        & .par-book {
+            top: 20%;
+            right: 56%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & img[src*='pin']{
+            max-width: 11.25rem;
+            bottom: 4%;
+            right: 50%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & img[src*='arrow-pin'] {
+            bottom: 32%;
+            right: 61%;
+            z-index: -1;
+            transform: scale(0.7);
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        & .par-pin {
+            bottom: 20%;
+            right: 55.5%;
+            z-index: -1;
+            transition: transform 600ms cubic-bezier(.22,.26,0,1.23);
+        }
+
+        &:hover {
+            & img[src*='bookmark-purple']{
+                transform: translateX(16.25rem) rotate(22deg);
+            }
+
+            & img[src*='bookmark-yellow']{
+                transform: translateX(9.0625rem) translateY(-6.5625rem) rotate(12deg);
+            }
+
+            & img[src*='arrow-page-mark'] {
+                transform: translateX(12.5rem) translateY(12.8125rem);
+            }
+    
+            & .par-bookmark {
+                transform: translateX(13.125rem) translateY(14.6875rem);
+            }
+    
+            & img[src*='arrow-book'] {
+                transform: translateX(-17.8125rem) translateY(-11.25rem);
+            }
+            
+            & .par-book {
+                transform: translateX(-16.25rem) translateY(-11.25rem);
+            }
+    
+            & img[src*='pin']{
+                transform: translateX(-10.3125rem) translateY(5.625rem) rotate(-8deg);
+            }
+    
+            & img[src*='arrow-pin'] {
+                transform: translateX(-12.3125rem) translateY(6.25rem);
+            }
+    
+            & .par-pin {
+                transform: translateX(-15rem) translateY(5.625rem);
+            }
+        }
+    }
+}
