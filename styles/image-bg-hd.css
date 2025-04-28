@@ -23,3 +23,11 @@
         background-color: var(--pink-low);
     }
 }
+
+@media (width < 50em) {
+    #image-bg-hd {
+        &::before{
+            background-size: 250%;
+        }
+    }
+}

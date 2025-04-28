@@ -9,3 +9,10 @@ header {
         object-fit: contain;
     }
 }
+
+@media (width < 50em) {
+    header {
+        padding: 1.25rem 1.25rem 0 1.25rem;
+        margin-bottom: 3rem;
+    }
+}

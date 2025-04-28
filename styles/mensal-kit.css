@@ -145,3 +145,147 @@
         }
     }
 }
+
+@media (width < 50em) {
+    #mensal-kit {
+        & p {
+            font-size: .875rem;
+            padding-bottom: 4rem;
+        }
+
+        & > div:nth-child(1) {
+            justify-content: center;
+            gap: .75rem;
+            padding-top: 6.5rem;
+            padding-inline: 2rem;
+
+            & h3 {
+                font-size: 1.5rem;
+            }
+    
+            & img {
+                width: 1.25rem;
+                height: 1.25rem;
+                filter: drop-shadow(0px 0px 1rem var(--pink-base));
+            }
+        }
+
+        & .mensal-kit-animation {
+            /* width: 50%; */
+            background-size: 9.824375rem;
+            height: 20rem;
+
+
+            & img[src*='bookmark-purple']{
+                scale: .7;
+                transition: none;
+                transform: translateX(6rem) translateY(-.5rem) rotate(22deg);
+            }
+
+            & img[src*='bookmark-yellow']{
+                scale: .7;
+                transition: none;
+                transform: translateX(2.5rem) translateY(-3.5rem) rotate(12deg);
+            }
+
+            & img[src*='arrow-page-mark'] {
+                scale: .3;
+                transition: none;
+                transform: translateX(0rem) translateY(16rem);
+            }
+    
+            & .par-bookmark {
+                scale: .9;
+                transition: none;
+                transform: translateX(2rem) translateY(-.5rem);
+            }
+    
+            & img[src*='arrow-book'] {
+                scale: .4;
+                transition: none;
+                transform: translateX(-7.5rem) translateY(-6.5rem);
+            }
+            
+            & .par-book {
+                scale: .9;
+                transition: none;
+                transform: translateX(-2.5rem) translateY(-3rem);
+            }
+    
+            & img[src*='pin']{
+                scale: .4;
+                transition: none;
+                transform: translateX(.5rem) translateY(7rem) rotate(-8deg);
+            }
+    
+            & img[src*='arrow-pin'] {
+                scale: .4;
+                transition: none;
+                transform: translateX(-3rem) translateY(7em);
+            }
+    
+            & .par-pin {
+                scale: .9;
+                transition: none;
+                transform: translateX(-3rem) translateY(-2.5rem);
+            }
+
+            &:hover {
+                & img[src*='bookmark-purple']{
+                    scale: .7;
+                    transition: none;
+                    transform: translateX(6rem) translateY(-.5rem) rotate(22deg);
+                }
+    
+                & img[src*='bookmark-yellow']{
+                    scale: .7;
+                    transition: none;
+                    transform: translateX(2.5rem) translateY(-3.5rem) rotate(12deg);
+                }
+    
+                & img[src*='arrow-page-mark'] {
+                    scale: .3;
+                    transition: none;
+                    transform: translateX(0rem) translateY(16rem);
+                }
+        
+                & .par-bookmark {
+                    scale: .9;
+                    transition: none;
+                    transform: translateX(2rem) translateY(-.5rem);
+                }
+        
+                & img[src*='arrow-book'] {
+                    scale: .4;
+                    transition: none;
+                    transform: translateX(-7.5rem) translateY(-6.5rem);
+                }
+                
+                & .par-book {
+                    scale: .9;
+                    transition: none;
+                    transform: translateX(-2.5rem) translateY(-3rem);
+                }
+        
+                & img[src*='pin']{
+                    scale: .4;
+                    transition: none;
+                    transform: translateX(.5rem) translateY(7rem) rotate(-8deg);
+                }
+        
+                & img[src*='arrow-pin'] {
+                    scale: .4;
+                    transition: none;
+                    transform: translateX(-3rem) translateY(7em);
+                }
+        
+                & .par-pin {
+                    scale: .9;
+                    transition: none;
+                    transform: translateX(-3rem) translateY(-2.5rem);
+                }
+            }
+        }
+    }
+    
+}

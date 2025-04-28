@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     min-height: 50rem;
-    max-height: 59,25rem;
+    max-height: 59rem;
     text-align: center;
 
     & > div {
@@ -19,8 +19,29 @@
         & p {
             opacity: 0;
             padding-top: 2rem;
-            padding-inline: 80px;
+            padding-inline: 5rem;
             animation: appear 500ms 1s ease both;
         }
+    }
+}
+
+@media (width < 50em) {
+    #apresentation {
+        min-height: 29rem;
+        max-height: 40rem;
+        & > div {
+            margin-inline: 1.25rem;
+            & h1 {
+                margin-inline: 1.23rem;
+                font-size: 1.75rem;
+            }
+
+            & p {
+                font-size: .875rem;
+                padding-top: 1rem;
+                padding-inline: 1.25rem;
+            }
+        }
+
     }
 }
