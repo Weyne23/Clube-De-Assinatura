@@ -29,7 +29,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        background: center center/contain no-repeat url("/assets/image/book-colina.png");
+        background: center center/contain no-repeat url("../assets/image/book-colina.png");
         
         &::before {
             content: "";
